@@ -1,0 +1,16 @@
+emg_collection\commontables.o: F:/KEIL_MDK/ARM/PACK/ARM/CMSIS-DSP/1.16.2/Source/CommonTables/CommonTables.c
+emg_collection\commontables.o: F:/KEIL_MDK/ARM/PACK/ARM/CMSIS-DSP/1.16.2/Source/CommonTables/arm_common_tables.c
+emg_collection\commontables.o: F:\KEIL_MDK\ARM\PACK\ARM\CMSIS-DSP\1.16.2\Include\arm_math_types.h
+emg_collection\commontables.o: ../Drivers/CMSIS/Include/cmsis_compiler.h
+emg_collection\commontables.o: F:\KEIL_MDK\ARM\ARMCC\Bin\..\include\stdint.h
+emg_collection\commontables.o: ../Drivers/CMSIS/Include/cmsis_armcc.h
+emg_collection\commontables.o: F:\KEIL_MDK\ARM\ARMCC\Bin\..\include\string.h
+emg_collection\commontables.o: F:\KEIL_MDK\ARM\ARMCC\Bin\..\include\math.h
+emg_collection\commontables.o: F:\KEIL_MDK\ARM\ARMCC\Bin\..\include\float.h
+emg_collection\commontables.o: F:\KEIL_MDK\ARM\ARMCC\Bin\..\include\limits.h
+emg_collection\commontables.o: ..\DSP_Math\arm_common_tables.h
+emg_collection\commontables.o: ..\DSP_Math\arm_math.h
+emg_collection\commontables.o: ../Drivers/CMSIS/Include/core_cm3.h
+emg_collection\commontables.o: ../Drivers/CMSIS/Include/cmsis_version.h
+emg_collection\commontables.o: F:/KEIL_MDK/ARM/PACK/ARM/CMSIS-DSP/1.16.2/Source/CommonTables/arm_const_structs.c
+emg_collection\commontables.o: ..\DSP_Math\arm_const_structs.h

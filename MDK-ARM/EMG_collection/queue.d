@@ -1,0 +1,15 @@
+emg_collection\queue.o: ../Middlewares/Third_Party/FreeRTOS/Source/queue.c
+emg_collection\queue.o: F:\KEIL_MDK\ARM\ARMCC\Bin\..\include\stdlib.h
+emg_collection\queue.o: F:\KEIL_MDK\ARM\ARMCC\Bin\..\include\string.h
+emg_collection\queue.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
+emg_collection\queue.o: F:\KEIL_MDK\ARM\ARMCC\Bin\..\include\stddef.h
+emg_collection\queue.o: F:\KEIL_MDK\ARM\ARMCC\Bin\..\include\stdint.h
+emg_collection\queue.o: ../Core/Inc/FreeRTOSConfig.h
+emg_collection\queue.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h
+emg_collection\queue.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h
+emg_collection\queue.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h
+emg_collection\queue.o: ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3/portmacro.h
+emg_collection\queue.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h
+emg_collection\queue.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/task.h
+emg_collection\queue.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/list.h
+emg_collection\queue.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h

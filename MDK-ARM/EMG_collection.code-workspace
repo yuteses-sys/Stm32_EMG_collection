@@ -1,0 +1,13 @@
+{
+    "folders": [
+        {
+            "path": "."
+        },
+        {
+            "name": "EMG_collection",
+            "path": ".."
+        }
+    ],
+    "settings": {},
+    "extensions": {}
+}

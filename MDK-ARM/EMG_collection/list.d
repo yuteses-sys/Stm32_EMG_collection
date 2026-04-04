@@ -1,0 +1,12 @@
+emg_collection\list.o: ../Middlewares/Third_Party/FreeRTOS/Source/list.c
+emg_collection\list.o: F:\KEIL_MDK\ARM\ARMCC\Bin\..\include\stdlib.h
+emg_collection\list.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
+emg_collection\list.o: F:\KEIL_MDK\ARM\ARMCC\Bin\..\include\stddef.h
+emg_collection\list.o: F:\KEIL_MDK\ARM\ARMCC\Bin\..\include\stdint.h
+emg_collection\list.o: ../Core/Inc/FreeRTOSConfig.h
+emg_collection\list.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h
+emg_collection\list.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h
+emg_collection\list.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h
+emg_collection\list.o: ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3/portmacro.h
+emg_collection\list.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h
+emg_collection\list.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/list.h
