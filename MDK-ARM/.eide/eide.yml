@@ -3,7 +3,8 @@ name: EMG_collection
 type: ARM
 deviceName: null
 packDir: null
-srcDirs: []
+srcDirs:
+  - ../DSP_Math
 virtualFolder:
   name: <virtual_root>
   files: []
@@ -80,11 +81,6 @@ virtualFolder:
       files:
         - path: ../software/OledMenu.c
         - path: ../software/OledMenu.h
-        - path: ../software/app_task.c
-        - path: ../software/app_task.h
-      folders: []
-    - name: ::CMSIS
-      files: []
       folders: []
     - name: Middlewares
       files: []
@@ -102,6 +98,16 @@ virtualFolder:
             - path: ../Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c
             - path: ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3/port.c
           folders: []
+    - name: DSP_Math
+      files:
+        - path: ../DSP_Math/arm_common_tables.h
+        - path: ../DSP_Math/arm_const_structs.h
+        - path: ../DSP_Math/arm_cortexM3l_math.lib
+        - path: ../DSP_Math/arm_math.h
+      folders: []
+    - name: ::CMSIS
+      files: []
+      folders: []
 dependenceList: []
 outDir: build
 miscInfo:
@@ -124,9 +130,9 @@ targets:
         - ../Middlewares/Third_Party/FreeRTOS/Source/include
         - ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2
         - ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3
+        - ../DSP_Math
         - .cmsis/include
         - RTE/_EMG_collection
-        - ../DSP_Math
       libList: []
     excludeList: []
     settings: {}
@@ -223,7 +229,7 @@ targets:
               isChecked: true
               isStartup: true
               mem:
-                size: "0x10000"
+                size: "0x20000"
                 startAddr: "0x8000000"
               tag: IROM
             - id: 2
