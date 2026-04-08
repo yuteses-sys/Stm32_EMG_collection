@@ -69,6 +69,16 @@ void Error_Handler(void);
 #define W25Q64_MISO_GPIO_Port GPIOA
 #define W25Q64_MOSI_Pin GPIO_PIN_7
 #define W25Q64_MOSI_GPIO_Port GPIOA
+#define SW1_Pin GPIO_PIN_12
+#define SW1_GPIO_Port GPIOB
+#define SW1_EXTI_IRQn EXTI15_10_IRQn
+#define SW2_Pin GPIO_PIN_13
+#define SW2_GPIO_Port GPIOB
+#define SW2_EXTI_IRQn EXTI15_10_IRQn
+#define SW3_Pin GPIO_PIN_14
+#define SW3_GPIO_Port GPIOB
+#define SW4_Pin GPIO_PIN_15
+#define SW4_GPIO_Port GPIOB
 #define SYN6288_TX_Pin GPIO_PIN_9
 #define SYN6288_TX_GPIO_Port GPIOA
 #define SYN6288_RX_Pin GPIO_PIN_10

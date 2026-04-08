@@ -30,6 +30,6 @@ void SYN6288_Say(char *text)
     
     frame[5 + text_len] = xor_check;
     
-    HAL_UART_Transmit(&huart3, frame, 6 + text_len, 1000);
+    HAL_UART_Transmit(&huart1, frame, 6 + text_len, 1000);
     HAL_Delay(50); 
 }

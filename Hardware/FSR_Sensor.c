@@ -1,43 +1,30 @@
 #include "FSR_Sensor.h"
-#include "adc.h"
 
-extern volatile uint16_t ADC_Values[2]; 
+// 私有全局变量
+static float fsr_filtered = 0.0f;
+static float current_force = 0.0f;
 
-void FSR_Init(void)
-{
-    // 因为 ADC 和 DMA 已经在 main() 函数开头通过 HAL_ADC_Start_DMA 启动了
-    // 所以这里其实不需要写任何硬件启动代码
-    // 留个空函数是为了保持代码结构统一，方便以后扩展
+// 初始化函数
+void FSR_Init(void) {
+    fsr_filtered = 0.0f;
+    current_force = 0.0f;
 }
-uint16_t FSR_ReadRaw(void)
-{
-    // 静态变量：保留上一次的滤波结果
-    static uint32_t filtered_val = 0; 
-    
-    // 获取当前原始值（逻辑翻转后）
-    uint16_t current_raw = 4095 - ADC_Values[1]; 
-    
-    // 一阶互补滤波：平滑度取决于系数（如 0.2 和 0.8）
-    // 数值越小越丝滑，但响应会变慢
-    filtered_val = (filtered_val * 8 + current_raw * 2) / 10;
-    
-    return (uint16_t)filtered_val;
-}
-Fsr_Sensor FSR_GetState(void)
-{
-    uint16_t val = FSR_ReadRaw();
 
-    // 逻辑：数值越大 = 力越大
-    if (val > FSR_TH_GRIP) 
-    {
-        return Fsr_Grip ; // 抓紧了
+// 核心处理函数 (包含滤波、硬件反转和映射)
+void FSR_Process(uint16_t raw_adc) {
+    
+
+    float inverted_adc = 4095.0f - (float)raw_adc;
+
+    fsr_filtered = fsr_filtered * 0.85f + inverted_adc * 0.15f; 
+
+    if (fsr_filtered > FSR_DEAD_ZONE) {
+        current_force = (fsr_filtered / 4095.0f) * FSR_MAX_FORCE; 
+    } else {
+        current_force = 0.0f; 
     }
-    else if (val > FSR_TH_TOUCH) 
-    {
-        return Fsr_Touch; // 摸到了
-    }
-    else 
-    {
-        return Fsr_None; // 没碰到
-    }
+}
+
+float FSR_Get_Force(void) {
+    return current_force;
 }

@@ -23,7 +23,6 @@ virtualFolder:
               files:
                 - path: ../Core/Src/main.c
                 - path: ../Core/Src/gpio.c
-                - path: ../Core/Src/freertos.c
                 - path: ../Core/Src/adc.c
                 - path: ../Core/Src/dma.c
                 - path: ../Core/Src/i2c.c
@@ -76,28 +75,14 @@ virtualFolder:
         - path: ../Hardware/W25Q64.h
         - path: ../Hardware/EMG.c
         - path: ../Hardware/EMG.h
+        - path: ../Hardware/emg_algo.c
+        - path: ../Hardware/emg_algo.h
       folders: []
     - name: software
       files:
         - path: ../software/OledMenu.c
         - path: ../software/OledMenu.h
       folders: []
-    - name: Middlewares
-      files: []
-      folders:
-        - name: FreeRTOS
-          files:
-            - path: ../Middlewares/Third_Party/FreeRTOS/Source/croutine.c
-            - path: ../Middlewares/Third_Party/FreeRTOS/Source/event_groups.c
-            - path: ../Middlewares/Third_Party/FreeRTOS/Source/list.c
-            - path: ../Middlewares/Third_Party/FreeRTOS/Source/queue.c
-            - path: ../Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.c
-            - path: ../Middlewares/Third_Party/FreeRTOS/Source/tasks.c
-            - path: ../Middlewares/Third_Party/FreeRTOS/Source/timers.c
-            - path: ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.c
-            - path: ../Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c
-            - path: ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3/port.c
-          folders: []
     - name: DSP_Math
       files:
         - path: ../DSP_Math/arm_common_tables.h
@@ -127,14 +112,12 @@ targets:
         - ../Drivers/CMSIS/Include
         - ../Hardware
         - ../software
-        - ../Middlewares/Third_Party/FreeRTOS/Source/include
-        - ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2
-        - ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3
         - ../DSP_Math
         - .cmsis/include
         - RTE/_EMG_collection
       libList: []
-    excludeList: []
+    excludeList:
+      - <virtual_root>/Hardware/EMG.c
     settings: {}
     toolchain: AC5
     toolchainConfigMap:

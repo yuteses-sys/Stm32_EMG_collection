@@ -1,20 +1,20 @@
-#ifndef __FSR_SENSOR_H__
-#define __FSR_SENSOR_H__
+#ifndef __FSR_SENSOR_H
+#define __FSR_SENSOR_H
 
 #include "main.h"
 
-#define FSR_TH_TOUCH    500   // 灵敏度：轻轻碰到 (大于这个值算 Touch)
-#define FSR_TH_GRIP     3500  // 灵敏度：用力握紧 (大于这个值算 Grip)
+// --- 宏定义 ---
+#define FSR_DEAD_ZONE 30.0f      // 死区门限，消除轻微误触
+#define FSR_MAX_FORCE 10000.0f   // 假设最大受力量程 (比如 10000克)
 
-typedef enum{
-    Fsr_None = 0, //没碰到
-    Fsr_Touch,    //轻触
-    Fsr_Grip      //重握
-} Fsr_Sensor;
+// --- 接口函数 ---
+// 1. 初始化
+void FSR_Init(void);
 
-// ================= 函数声明 =================
-void FSR_Init(void);           // 初始化(其实是空的，为了格式统一)
-uint16_t FSR_ReadRaw(void);    // 读原始值 (调试用)
-Fsr_Sensor FSR_GetState(void);// 读状态 (业务用)
+// 2. 数据处理函数 (每5ms调用，传入ADC原始值，内部进行滤波和换算)
+void FSR_Process(uint16_t raw_adc);
+
+// 3. 获取最新的力值
+float FSR_Get_Force(void);
 
 #endif

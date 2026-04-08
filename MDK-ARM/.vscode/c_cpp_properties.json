@@ -10,17 +10,12 @@
                 "d:\\HAL_Test\\EMG_collection\\Drivers\\CMSIS\\Include",
                 "d:\\HAL_Test\\EMG_collection\\Hardware",
                 "d:\\HAL_Test\\EMG_collection\\software",
-                "d:\\HAL_Test\\EMG_collection\\Middlewares\\Third_Party\\FreeRTOS\\Source\\include",
-                "d:\\HAL_Test\\EMG_collection\\Middlewares\\Third_Party\\FreeRTOS\\Source\\CMSIS_RTOS_V2",
-                "d:\\HAL_Test\\EMG_collection\\Middlewares\\Third_Party\\FreeRTOS\\Source\\portable\\RVDS\\ARM_CM3",
                 "d:\\HAL_Test\\EMG_collection\\DSP_Math",
                 "F:\\KEIL_MDK\\ARM\\ARMCC\\include",
                 "F:\\KEIL_MDK\\ARM\\ARMCC\\include\\rw",
                 "d:\\HAL_Test\\EMG_collection\\MDK-ARM",
                 "d:\\HAL_Test\\EMG_collection\\Core\\Src",
-                "d:\\HAL_Test\\EMG_collection\\Drivers\\STM32F1xx_HAL_Driver\\Src",
-                "d:\\HAL_Test\\EMG_collection\\Middlewares\\Third_Party\\FreeRTOS\\Source",
-                "d:\\HAL_Test\\EMG_collection\\Middlewares\\Third_Party\\FreeRTOS\\Source\\portable\\MemMang"
+                "d:\\HAL_Test\\EMG_collection\\Drivers\\STM32F1xx_HAL_Driver\\Src"
             ],
             "defines": [
                 "USE_HAL_DRIVER",
